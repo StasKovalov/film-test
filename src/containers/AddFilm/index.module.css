@@ -1,0 +1,47 @@
+.byForm {
+    width: 50%;
+}
+
+.byInput {
+    width: 50%;
+}
+
+.byInput {
+    padding: 20px;
+}
+
+.uploadFilms {
+    display: flex;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.inputPosition {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.titleWrapper {
+    padding: 20px 0px 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.textHead {
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+}
+
+.list {
+    padding-top: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.variant:last-child {
+    margin-top: 5px;
+}

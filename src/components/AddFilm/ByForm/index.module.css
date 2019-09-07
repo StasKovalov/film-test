@@ -1,0 +1,66 @@
+.ByForm {
+    padding: 0px 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.category {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.addButton {
+    margin: 20px 0;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #fa923f;
+    background-color: transparent;
+    color: #fa923f;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.addButton:hover,
+.ddButton:active {
+    color: white;
+    background-color: #fa923f;
+}
+
+.release, .format {
+    max-width: 140px;
+}
+
+.stars {
+    width: 80%;
+}
+
+.title {
+    max-width: 500px;
+    width: 100%;
+}
+
+.title, .format, .release, .stars {
+    font-weight: 500;
+    font-size: 17px;
+    padding: 5px 15px;
+    display: block;
+    background: #eee;
+    box-sizing: border-box;
+    outline: none;
+    margin: auto;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.addButton:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
