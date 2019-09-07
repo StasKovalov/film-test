@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import style from "./index.module.css";
+
+import { addFilm } from "../../../redux/actionCreators";
 
 class ByForm extends Component {
   state = {
@@ -12,8 +15,21 @@ class ByForm extends Component {
     isValid: false,
   };
 
+  addFilm = () => {
+    const { addFilm } = this.props;
+    const { title, release, format, stars } = this.state.filmForm;
+    const filmData = {
+      Title: title,
+      "Release Year": release,
+      Format: format,
+      Stars: stars,
+    };
+    console.log(filmData);
+    addFilm(filmData);
+  };
+
   checkValidForm = (e, key) => {
-    const filmForm = { ...this.state.postForm };
+    const filmForm = { ...this.state.filmForm };
     let filmFormEl = { ...filmForm[key] };
     filmFormEl = e.target.value;
     filmForm[key] = filmFormEl;
@@ -72,7 +88,12 @@ class ByForm extends Component {
           onChange={event => this.checkValidForm(event, "stars")}
         />
 
-        <button className={style.addButton} disabled={!isValid} type="button">
+        <button
+          onClick={this.addFilm}
+          className={style.addButton}
+          disabled={!isValid}
+          type="button"
+        >
           ADD FILM
         </button>
       </div>
@@ -80,4 +101,9 @@ class ByForm extends Component {
   }
 }
 
-export default ByForm;
+const mapDispatchToProps = { addFilm };
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ByForm);

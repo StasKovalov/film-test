@@ -1,5 +1,9 @@
 @import "./css/reset.css";
 
+* {
+    box-sizing: border-box;
+}
+
 #root {
     font-family: Arial, Helvetica, sans-serif;
 }

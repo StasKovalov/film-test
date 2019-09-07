@@ -1,9 +1,13 @@
 .byForm {
-    width: 50%;
+    width: 49%;
 }
 
 .byInput {
-    width: 50%;
+    width: 49%;
+}
+
+.byInput, .byForm {
+    box-sizing: border-box;
 }
 
 .byInput {

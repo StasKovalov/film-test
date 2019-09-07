@@ -1,0 +1,67 @@
+.film {
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 10px 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.category {
+    font-size: 20px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.info {
+    font-size: 17px;
+}
+
+.deleteFilm {
+    display: block;
+    box-sizing: content-box;
+    background:rgba(228, 29, 29, 0.829);
+    color:#fff;
+    border:none;
+    position:relative;
+    height:15px;
+    font-size:13px;
+    padding: 5px 10px;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  
+.deleteFilm:hover{
+    background:#fff;
+    color:rgba(228, 29, 29, 0.829);
+  }
+  
+.deleteFilm:before,
+.deleteFilm:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: rgba(228, 29, 29, 0.829);
+    transition:400ms ease all;
+  }
+  
+.deleteFilm:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  
+.deleteFilm:hover:before,
+.deleteFilm:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }

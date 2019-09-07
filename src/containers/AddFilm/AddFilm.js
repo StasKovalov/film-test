@@ -1,9 +1,13 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import style from "./index.module.css";
+
+import { addFilms } from "../../redux/actionCreators";
 
 import ByForm from "../../components/AddFilm/ByForm";
 
 class AddFilm extends Component {
+
   render() {
     return (
       <div className={style.addFilm}>
@@ -34,4 +38,6 @@ class AddFilm extends Component {
   }
 }
 
-export default AddFilm;
+const mapDispatchToProps = { addFilms };
+
+export default connect()(AddFilm);
