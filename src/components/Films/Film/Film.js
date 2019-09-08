@@ -1,10 +1,22 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import style from "./index.module.css";
 
+import { deleteFilm } from "../../../redux/actionCreators";
+
 class Film extends Component {
+  deleteFilm = e => {
+    const {
+      target: {
+        dataset: { title },
+      },
+    } = e;
+    const { deleteFilm } = this.props;
+    deleteFilm(title);
+  };
+
   render() {
     const { Title, "Release Year": realeseYear, Format, Stars } = this.props;
-    console.log(this.props);
     return (
       <div className={style.film}>
         <div className={style.item}>
@@ -27,7 +39,12 @@ class Film extends Component {
           <p className={style.info}>{Stars}</p>
         </div>
 
-        <button type="button" className={style.deleteFilm}>
+        <button
+          data-title={Title}
+          onClick={this.deleteFilm}
+          type="button"
+          className={style.deleteFilm}
+        >
           DELETE FILM
         </button>
       </div>
@@ -35,4 +52,11 @@ class Film extends Component {
   }
 }
 
-export default Film;
+const mapDispatchToProps = {
+  deleteFilm,
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Film);

@@ -11,7 +11,7 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact component={Films} />
-        <Route path="/add-films" exact component={AddFilm} />
+        <Route path="/add-films" component={AddFilm} />
       </Switch>
     </Layout>
   );

@@ -1,10 +1,4 @@
-.byForm {
-    width: 49%;
-}
-
-.byInput {
-    width: 49%;
-}
+@import "../../css/variabels.css";
 
 .byInput, .byForm {
     box-sizing: border-box;
@@ -27,6 +21,9 @@
 .inputPosition {
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .titleWrapper {
@@ -48,4 +45,33 @@
 
 .variant:last-child {
     margin-top: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .byForm, .byInput {
+    width: 49%;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+     .uploadFilms {
+       flex-direction: column;
+    }
+
+    .byForm, .byInput {
+    width: 100%;
+}
+
+.byInput {
+    margin-top: 20px;
+}
+
 }

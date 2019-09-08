@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { ClipLoader } from "react-spinners";
+import { withRouter } from "react-router-dom";
 import style from "./index.module.css";
 
 import { addFilm } from "../../../redux/actionCreators";
@@ -13,10 +15,19 @@ class ByForm extends Component {
       stars: "",
     },
     isValid: false,
+    loading: false,
+  };
+
+  shouldComponentUpdate = nextProps => {
+    const { films } = nextProps;
+    const filmsJson = JSON.stringify(films);
+    localStorage.setItem("films", filmsJson);
+    return true;
   };
 
   addFilm = () => {
-    const { addFilm } = this.props;
+    this.setState({ loading: true });
+    const { addFilm, history } = this.props;
     const { title, release, format, stars } = this.state.filmForm;
     const filmData = {
       Title: title,
@@ -24,8 +35,11 @@ class ByForm extends Component {
       Format: format,
       Stars: stars,
     };
-    console.log(filmData);
     addFilm(filmData);
+    setTimeout(() => {
+      this.setState({ loading: false });
+      history.push("/");
+    }, 400);
   };
 
   checkValidForm = (e, key) => {
@@ -41,7 +55,7 @@ class ByForm extends Component {
   };
 
   render() {
-    const { filmForm, isValid } = this.state;
+    const { filmForm, isValid, loading } = this.state;
     return (
       <div className={style.ByForm}>
         <label className={style.category} htmlFor="title">
@@ -94,16 +108,18 @@ class ByForm extends Component {
           disabled={!isValid}
           type="button"
         >
-          ADD FILM
+          {loading ? <ClipLoader color="#847f7f" size={13} /> : "ADD FILM"}
         </button>
       </div>
     );
   }
 }
 
+const mapStateToProps = ({ films }) => ({ films });
+
 const mapDispatchToProps = { addFilm };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
-)(ByForm);
+)(withRouter(ByForm));

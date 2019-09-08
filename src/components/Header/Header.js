@@ -8,10 +8,7 @@ const Header = () => (
       exact
       activeClassName={style.activeLink}
       className={style.link}
-      to={{
-        pathname: "/",
-        state: { updatePost: false },
-      }}
+      to="/"
     >
       FILMS
     </NavLink>
@@ -20,10 +17,7 @@ const Header = () => (
       exact
       activeClassName={style.activeLink}
       className={style.link}
-      to={{
-        pathname: "/add-films",
-        state: { updatePost: false },
-      }}
+      to="/add-films"
     >
       ADD FILMS
     </NavLink>

@@ -80,6 +80,7 @@ module.exports = {
         "import/prefer-default-export": 0,
         "import": 0,
         "func-names": 0,
+        "no-fallthrough": 0,
         "space-before-function-paren": 0,
         "comma-dangle": 0,
         "max-len": 0,
@@ -94,6 +95,7 @@ module.exports = {
         "react/no-unescaped-entities": 0,
         "jsx-a11y/accessible-emoji": 0,
         "react/require-default-props": 0,
+        "react/jsx-fragments": 0,
         "react/jsx-filename-extension": [
             1,
             {

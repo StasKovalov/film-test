@@ -1,6 +1,31 @@
+.flex {
+  display: flex;
+  position: relative;
+}
+
 .film {
   max-width: 650px;
   margin: 0 auto;
   margin-top: 20px;
+  background: white;
 }
 
+.films {
+  width: 65%;
+}
+
+.sidebarWrapper {
+  position: sticky;
+  margin-top: 20px;
+  left: 0;
+  max-height: 380px;
+  top: 20px;
+  width: 32%;
+}
+
+.notFound {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
