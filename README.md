@@ -3,13 +3,13 @@
 Clone the repository
 
 ```
-$ git clone https://github.com/StasKovalov/front-end-challenge.git
+$ git clone https://github.com/StasKovalov/film-test.git
 ```
 
 
 Move to the directory
 ```
-$ cd front-end-challenge
+$ cd film-test
 ```
 
 Install dependecies
