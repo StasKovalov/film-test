@@ -18,8 +18,8 @@ class Sidebar extends Component {
     loading: false,
   };
 
-  selectTypeSearch = e => this.setState({ searchByTitle: JSON.parse(e.target.value) });
-  
+  selectTypeSearch = e =>
+    this.setState({ searchByTitle: JSON.parse(e.target.value) });
 
   searchFilmsByTitle = e => {
     const { byTitle } = this.props;
