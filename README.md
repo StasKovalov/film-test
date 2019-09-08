@@ -1,14 +1,20 @@
 ### Install 
+
 Clone the repository
 
 ```
 $ git clone https://github.com/StasKovalov/front-end-challenge.git
 ```
 
-Install dependecies for Frontend
+
+Move to the directory
 ```
 $ cd front-end-challenge
-$ yarn install or yarn
+```
+
+Install dependecies for Frontend
+```
+$ yarn
 ```
 
 
