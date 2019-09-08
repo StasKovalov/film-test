@@ -12,7 +12,7 @@ Move to the directory
 $ cd front-end-challenge
 ```
 
-Install dependecies for Frontend
+Install dependecies
 ```
 $ yarn
 ```
