@@ -39,11 +39,7 @@ const filmsReducer = (state = initialState, { type, payload }) => {
       };
 
     case DELETE_FILM:
-      const indexDeleteFilm = state.films.findIndex(
-        film => film.Title === payload
-      );
-      const filtredFilms = [...state.films];
-      filtredFilms.splice(indexDeleteFilm, 1);
+      const filtredFilms = state.films.filter( film => film.Title !== payload);
 
       return {
         films: filtredFilms,
