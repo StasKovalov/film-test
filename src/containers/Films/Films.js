@@ -11,11 +11,10 @@ class Films extends Component {
     this.getFilms();
   };
 
-  componentDidUpdate = nextProps => {
-    const { films } = nextProps;
+  componentDidUpdate = () => {
+    const { films } = this.props;
     const filmsJson = JSON.stringify(films);
     localStorage.setItem("films", filmsJson);
-    return true;
   };
 
   getFilms = () => {

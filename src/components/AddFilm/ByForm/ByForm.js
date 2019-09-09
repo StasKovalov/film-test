@@ -18,11 +18,10 @@ class ByForm extends Component {
     loading: false,
   };
 
-  componentDidUpdate = nextProps => {
-    const { films } = nextProps;
+  componentDidUpdate = () => {
+    const { films } = this.props;
     const filmsJson = JSON.stringify(films);
     localStorage.setItem("films", filmsJson);
-    return true;
   };
 
   addFilm = () => {
