@@ -18,7 +18,7 @@ class ByForm extends Component {
     loading: false,
   };
 
-  shouldComponentUpdate = nextProps => {
+  componentDidUpdate = nextProps => {
     const { films } = nextProps;
     const filmsJson = JSON.stringify(films);
     localStorage.setItem("films", filmsJson);

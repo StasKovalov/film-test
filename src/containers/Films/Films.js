@@ -11,7 +11,7 @@ class Films extends Component {
     this.getFilms();
   };
 
-  shouldComponentUpdate = nextProps => {
+  componentDidUpdate = nextProps => {
     const { films } = nextProps;
     const filmsJson = JSON.stringify(films);
     localStorage.setItem("films", filmsJson);
